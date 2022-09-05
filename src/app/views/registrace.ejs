@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="zprava"></div>
+    <form  method="post">
+        <input type="text" name="jmeno" id="jmeno"> jmeno
+        <input type="password" name="heslo" id="heslo">heslo
+        <input type="passwor" id="potvrzeni_hesla"> potvrdit heslo
+        <input type="button" name="" onclick="registrovat()" value="potrvdit">
+    </form>
+    <script>
+        
+        function registrovat()
+        {
+            let jmeno =document.querySelector("#jmeno").value;
+            let heslo = document.querySelector("#heslo").value;
+            let potvrzeni_hesla = document.querySelector("#potvrzeni_hesla").value;
+            fetch('/registrovani', {
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(
+                    {
+                        jmeno:jmeno,
+                        heslo:heslo,
+                        potvrzeni_hesla:potvrzeni_hesla
+                    }
+                ),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+
+                  document.querySelector("#zprava").innerHTML = data.odpoved
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

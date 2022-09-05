@@ -1,0 +1,19 @@
+{
+    "1": {
+        "jmeno": "",
+        "heslo": ""
+    },
+    "2": {
+        "jmeno": "fdsfds",
+        "heslo": "$2b$10$.AM6ACnnfiF1atM/fOALqOBZ4CLmvluhFPFdzGXscL9Zq8.2vaqrS"
+    },
+    "3": {
+        "jmeno": "ddd",
+        "heslo": "$2b$10$1Eb.L222eM8lO4L5DK/QnemqIOToX7HELpu2dHfKgvneCVVA03tsO"
+    },
+    "4": {
+        "jmeno": "dddd",
+        "heslo": "$2b$10$NDz7AUBAh53O3.z8FjqIZOGvi5S5ZWJfgQ1sKA8KTMgUlegfTxWzi"
+    },
+    "nextid": 5
+}
